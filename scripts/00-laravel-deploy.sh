@@ -13,6 +13,15 @@ echo "Caching routes..."
 php artisan route:cache
 
 echo "downloading frontend .."
+
+sudo apt update
+
+# Install Node.js
+sudo apt install -y nodejs
+
+# Install npm
+sudo apt install -y npm
+
 npm install && npm run build
 
 # echo "Running migrations..."
