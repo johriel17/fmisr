@@ -28,7 +28,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('auth:sanctum')->group(function () {
+// Route::middleware('auth:sanctum')->group(function () {
     // Route::get('/user', function (Request $request) {
     //     return $request->user();
     // });
@@ -66,5 +66,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/sale_logs/{id}', [SaleLogController::class, 'show']);
     Route::put('/sale_logs/{saleLog}', [SaleLogController::class, 'update']);
     // Route::delete('/frozens/{frozen}', [FrozenController::class, 'destroy']);
-});
+// });
 
