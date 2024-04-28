@@ -1,20 +1,16 @@
-FROM richarvey/nginx-php-fpm:1.7.2
+FROM php:7.4-fpm
+
+WORKDIR /var/www/html
+
+RUN apt-get update && apt-get install -y \
+    libzip-dev zip \
+    && docker-php-ext-configure zip \
+    && docker-php-ext-install zip pdo pdo_mysql
 
 COPY . .
 
-# Image config
-ENV SKIP_COMPOSER 1
-ENV WEBROOT /var/www/html/public
-ENV PHP_ERRORS_STDERR 1
-ENV RUN_SCRIPTS 1
-ENV REAL_IP_HEADER 1
+RUN composer install
 
-# Laravel config
-ENV APP_ENV production
-ENV APP_DEBUG false
-ENV LOG_CHANNEL stderr
+EXPOSE 9000
 
-# Allow composer to run as root
-ENV COMPOSER_ALLOW_SUPERUSER 1
-
-CMD ["/start.sh"]
+CMD ["php-fpm"]
