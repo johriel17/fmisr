@@ -1,0 +1,13 @@
+.spinner-size{
+    width: 8rem !important;
+    height: 8rem !important;
+}
+
+.error-msg{
+    color: red !important;
+    font-style: italic !important;
+}
+
+.error-input{
+    border: solid 1px red;
+}
