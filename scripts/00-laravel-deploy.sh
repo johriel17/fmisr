@@ -13,5 +13,5 @@ php artisan route:cache
 echo "downloading frontend .."
 npm install && npm run build
 
-echo "Running migrations..."
-php artisan migrate --force
+# echo "Running migrations..."
+# php artisan migrate --force
