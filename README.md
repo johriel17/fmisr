@@ -1,3 +1,3 @@
 # Integrating Admin Lte dashboard to React and Laravel
 
-# The server is live [here](fmisr.onrender.com)
+# The server is live [here](https://fmisr.onrender.com)
