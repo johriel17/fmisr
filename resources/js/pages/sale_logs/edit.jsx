@@ -116,7 +116,7 @@ const edit = () => {
           setSaleLogProducts(updatedSaleLogProducts);
       };
   return (
-    <div className="content-wrapper">
+    <div>
             <section className="content-header">
                 <div className="container-fluid">
                     <div className="row mb-2">
@@ -135,7 +135,7 @@ const edit = () => {
                         <form onSubmit={handleEditSaleLog}>
                             <div className="card-body">
                                 <div className="row">
-                                    <div className="col-6 form-group">
+                                    <div className="col-md-6 form-group">
                                         <label htmlFor="customer_name">Customer Name</label>
                                         <input type="text" name="customer_name" className={`form-control ${errors.customer_name && 'error-input'}`} value={formData.customer_name} onChange={handleChange} id="customer_name" autoComplete='off' />
                                         {errors.customer_name && errors.customer_name.map((msg, index) => (
@@ -144,7 +144,7 @@ const edit = () => {
                                     </div>
 
 
-                                    <div className="col-6 form-group">
+                                    <div className="col-md-6 form-group">
                                         <label htmlFor="sale_date">Date</label>
                                         <input type="text" name='sale_date' className={`form-control datetimepicker-input ${errors.sale_date && 'error-input'}`} id="datetimepicker" data-toggle="datetimepicker" data-target="#datetimepicker" ref={datetimepickerRef}  autoComplete='off'/>
                                         {errors.sale_date && errors.sale_date.map((msg, index) => (
@@ -204,7 +204,7 @@ const edit = () => {
 
                             </div>
                             <div className="card-footer text-right">
-                            <button type="submit" className="btn btn-primary">Submit</button>
+                            <button type="submit" className="btn btn-primary">Update</button>
                             </div>
                         </form>
                         </div>

@@ -18,6 +18,7 @@ class FrozenController extends Controller
 
             $frozens = Frozen::with('category','brand')
             ->where('name', 'like', '%' . $search . '%')
+            ->orWhere('size', 'like', '%' . $search . '%')
             ->paginate(10);
         }
 
@@ -35,6 +36,7 @@ class FrozenController extends Controller
             'name' => 'required|max:255',
             'description' => 'required',
             'amount' => 'required',
+            'size' => 'required',
             'category_id' => 'required',
             'brand_id' => 'required',
         ]);

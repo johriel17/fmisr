@@ -91,7 +91,7 @@ const index = () => {
 
 
   return (
-    <div className="content-wrapper">
+    <div>
             <section className="content-header">
                 <div className="container-fluid">
                     <div className="row mb-2">
@@ -117,7 +117,7 @@ const index = () => {
                                     <div className="card-header">
                                         <div className="row">
                                             <div className="col-3">
-                                                <Link to='/sale_logs/add' className='btn btn-primary btn-md'><i className="fas fa-plus"></i> Add Sale Log</Link>
+                                                <Link to='/sale_logs/add' className='btn btn-primary btn-md'><i className="fas fa-plus"></i> <span className='d-none d-sm-inline'>Add Sale Log</span></Link>
                                             </div>
                                             <div className="col-9">
                                                 <div className="row justify-content-end">
@@ -144,8 +144,8 @@ const index = () => {
                                         <tr>
                                             <th style={{width: 10}}>#</th>
                                             <th>Customer Name</th>
-                                            <th>Date</th>
-                                            <th>Total Price</th>
+                                            <th className="d-none d-sm-table-cell">Date</th>
+                                            <th className="d-none d-sm-table-cell">Total Price</th>
                                             <th className='text-center' style={{width: '150px'}}>Action</th>
                                         </tr>
                                         </thead>
@@ -154,8 +154,8 @@ const index = () => {
                                             <tr key={saleLog.id}>
                                                 <td>{(currentPage - 1) * 10 + index + 1}</td>
                                                 <td>{saleLog.customer_name}</td>
-                                                <td>{saleLog.sale_date}</td>
-                                                <td>{saleLog.total_price}</td>
+                                                <td className="d-none d-sm-table-cell">{saleLog.sale_date}</td>
+                                                <td className="d-none d-sm-table-cell">{saleLog.total_price}</td>
                                                 <td className='text-center'>
                                                     <div className="row justify-content-around">
 

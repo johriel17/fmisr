@@ -23,7 +23,7 @@ const view = () => {
     }, [])
     
     return (
-        <div className="content-wrapper">
+        <div>
             <section className="content-header">
                 <div className="container-fluid">
                     <div className="row mb-2">
@@ -40,46 +40,46 @@ const view = () => {
                         <div className="col-md-12">
                             <div className="card p-2">
                                 <div className="row ml-2">
-                                    <div className="col-2">
+                                    <div className="col-md-2">
                                         <p className="text-lg text-uppercase">Name :</p>
                                     </div>
-                                    <div className="col-10">
-                                        <p className="text-lg text-uppercase">{frozen.name}</p>
+                                    <div className="col-md-10">
+                                        <p className="text-lg text-uppercase font-weight-bold">{frozen.name}</p>
                                     </div>
                                 </div>
                                 <div className="row ml-2">
-                                    <div className="col-2">
+                                    <div className="col-md-2">
                                         <p className="text-lg text-uppercase">Description :</p>
                                     </div>
-                                    <div className="col-10">
-                                        <p className="text-lg text-uppercase">{frozen.description}</p>
+                                    <div className="col-md-10">
+                                        <p className="text-lg text-uppercase font-weight-bold">{frozen.description}</p>
                                     </div>
                                 </div>
                                 <div className="row ml-2">
-                                    <div className="col-2">
+                                    <div className="col-md-2">
                                         <p className="text-lg text-uppercase">Amount :</p>
                                     </div>
-                                    <div className="col-10">
-                                        <p className="text-lg text-uppercase">{frozen.amount}</p>
+                                    <div className="col-md-10">
+                                        <p className="text-lg text-uppercase font-weight-bold">{frozen.amount}</p>
                                     </div>
                                 </div>
                                 {frozen.category && (
                                     <div className="row ml-2">
-                                        <div className="col-2">
+                                        <div className="col-md-2">
                                             <p className="text-lg text-uppercase">Category :</p>
                                         </div>
-                                        <div className="col-10">
-                                            <p className="text-lg text-uppercase">{frozen.category.name}</p>
+                                        <div className="col-md-10">
+                                            <p className="text-lg text-uppercase font-weight-bold">{frozen.category.name}</p>
                                         </div>
                                     </div>
                                 )}
                                 {frozen.brand && (
                                     <div className="row ml-2">
-                                        <div className="col-2">
+                                        <div className="col-md-2">
                                             <p className="text-lg text-uppercase">Brand :</p>
                                         </div>
-                                        <div className="col-10">
-                                            <p className="text-lg text-uppercase">{frozen.brand.name}</p>
+                                        <div className="col-md-10">
+                                            <p className="text-lg text-uppercase font-weight-bold">{frozen.brand.name}</p>
                                         </div>
                                     </div>
                                 )}

@@ -25,7 +25,7 @@ const view = () => {
     }, [])
     
     return (
-        <div className="content-wrapper">
+        <div>
             <section className="content-header">
                 <div className="container-fluid">
                     <div className="row mb-2">
@@ -42,27 +42,27 @@ const view = () => {
                         <div className="col-md-12">
                             <div className="card p-2">
                                 <div className="row mx-2">
-                                    <div className="col-3">
+                                    <div className="col-md-3">
                                         <p className="text-lg text-uppercase">Customer Name :</p>
                                     </div>
-                                    <div className="col-9">
-                                        <p className="text-lg text-uppercase">{saleLog.customer_name}</p>
+                                    <div className="col-md-9">
+                                        <p className="text-lg text-uppercase font-weight-bold">{saleLog.customer_name}</p>
                                     </div>
                                 </div>
                                 <div className="row mx-2">
-                                    <div className="col-3">
+                                    <div className="col-md-3">
                                         <p className="text-lg text-uppercase">Sale Date :</p>
                                     </div>
-                                    <div className="col-9">
-                                        <p className="text-lg text-uppercase">{saleLog.sale_date}</p>
+                                    <div className="col-md-9">
+                                        <p className="text-lg text-uppercase font-weight-bold">{saleLog.sale_date}</p>
                                     </div>
                                 </div>
                                 <div className="row mx-2">
-                                    <div className="col-3">
+                                    <div className="col-md-3">
                                         <p className="text-lg text-uppercase">Total Price :</p>
                                     </div>
-                                    <div className="col-9">
-                                        <p className="text-lg text-uppercase">{saleLog.total_price}</p>
+                                    <div className="col-md-9">
+                                        <p className="text-lg text-uppercase font-weight-bold">{saleLog.total_price}</p>
                                     </div>
                                 </div>
                                 <div className="clear-fix my-3">

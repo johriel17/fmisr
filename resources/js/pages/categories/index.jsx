@@ -91,7 +91,7 @@ const index = () => {
 
 
   return (
-    <div className="content-wrapper">
+    <div>
             <section className="content-header">
                 <div className="container-fluid">
                     <div className="row mb-2">
@@ -117,7 +117,7 @@ const index = () => {
                                     <div className="card-header">
                                         <div className="row">
                                             <div className="col-3">
-                                                <Link to='/categories/add' className='btn btn-primary btn-md'><i className="fas fa-plus"></i> Add Category</Link>
+                                                <Link to='/categories/add' className='btn btn-primary btn-md'><i className="fas fa-plus"></i> <span className='d-none d-sm-inline'>Add Category</span></Link>
                                             </div>
                                             <div className="col-9">
                                                 <div className="row justify-content-end">

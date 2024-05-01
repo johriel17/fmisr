@@ -27,7 +27,7 @@ const add = () => {
 
     }
   return (
-    <div className="content-wrapper">
+    <div>
             <section className="content-header">
                 <div className="container-fluid">
                     <div className="row mb-2">
@@ -54,7 +54,7 @@ const add = () => {
                             </div>
                             </div>
                             <div className="card-footer text-right">
-                            <button type="submit" className="btn btn-primary">Submit</button>
+                            <button type="submit" className="btn btn-primary">Add</button>
                             </div>
                         </form>
                         </div>

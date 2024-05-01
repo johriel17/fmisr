@@ -31,7 +31,10 @@ class SelectController extends Controller
 
         if($type == 'all-frozen-with-cat'){
 
-            $frozens = Frozen::with('category', 'brand')->get();
+            $frozens = Frozen::with('category', 'brand')
+            ->where('amount', '>', 0)
+            ->orderBy('name')
+            ->get();
 
             $data = [];
 
@@ -39,7 +42,7 @@ class SelectController extends Controller
 
                 $data[] = [
 
-                    'name' => $frozen['name'].' - '.$frozen['category']['name'].' - '.$frozen['brand']['name'],
+                    'name' => $frozen['name'].' - '.$frozen['size'].' - '.$frozen['category']['name'].' - '.$frozen['brand']['name'],
 
                     'id' => $frozen['id']
 

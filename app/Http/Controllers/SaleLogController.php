@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Frozen;
 use App\Models\SaleLog;
 use App\Models\SaleLogProduct;
 use Illuminate\Http\Request;
@@ -59,9 +60,14 @@ class SaleLogController extends Controller
                 ]);
                 $total_price += $productData['price'];
                 $saleLogProduct->save();
-            }
 
-                    
+                //for auto subtracting of the inventory
+                $frozen = Frozen::find($productData['frozen_id']);
+                if ($frozen) {
+                    $frozen->amount -= 1; 
+                    $frozen->save();
+                }
+            }               
         }
         
         // Update the total price after saving all related SaleLogProducts

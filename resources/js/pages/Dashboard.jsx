@@ -51,7 +51,7 @@ const Dashboard = () => {
 
 
   return (
-    <div className="content-wrapper">
+    <div>
             {/* Content Header (Page header) */}
             <section className="content-header">
                 <div className="container-fluid">
@@ -80,7 +80,7 @@ const Dashboard = () => {
                             <div className="small-box bg-info">
                                 <div className="d-flex flex-column align-items-center">
                                     <p>Best Seller</p>
-                                    <h3>{bestSeller}</h3>
+                                    <h3>{bestSeller !== '' ? bestSeller : 'None'}</h3>
                                 </div>
                                 <Link to='frozens' className="small-box-footer">More info <i className="fas fa-arrow-circle-right" /></Link>
                             </div>
@@ -221,7 +221,7 @@ const Dashboard = () => {
                             </div>
                         </div>
                         <div className="col-md-6">
-                        <div class="card card-danger">
+                        <div className="card card-danger">
                             <div>
                             <div className="card-header">
                                 <h3 className="card-title">Pie Chart</h3>

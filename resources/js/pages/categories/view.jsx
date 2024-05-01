@@ -23,7 +23,7 @@ const view = () => {
     }, [])
     
     return (
-        <div className="content-wrapper">
+        <div>
             <section className="content-header">
                 <div className="container-fluid">
                     <div className="row mb-2">
@@ -40,11 +40,11 @@ const view = () => {
                         <div className="col-md-12">
                             <div className="card p-2">
                                 <div className="row ml-2">
-                                    <div className="col-2">
+                                    <div className="col-md-2">
                                         <p className="text-lg text-uppercase">Name :</p>
                                     </div>
-                                    <div className="col-10">
-                                        <p className="text-lg text-uppercase">{category.name}</p>
+                                    <div className="col-md-10">
+                                        <p className="text-lg text-uppercase font-weight-bold">{category.name}</p>
                                     </div>
                                 </div> 
                             </div>

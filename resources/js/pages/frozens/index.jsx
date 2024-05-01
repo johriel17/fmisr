@@ -91,7 +91,7 @@ const index = () => {
 
 
   return (
-    <div className="content-wrapper">
+    <div>
             <section className="content-header">
                 <div className="container-fluid">
                     <div className="row mb-2">
@@ -117,7 +117,7 @@ const index = () => {
                                     <div className="card-header">
                                         <div className="row">
                                             <div className="col-3">
-                                                <Link to='/frozens/add' className='btn btn-primary btn-md'><i className="fas fa-plus"></i> Add Frozen</Link>
+                                                <Link to='/frozens/add' className='btn btn-primary btn-md'><i className="fas fa-plus"></i> <span className='d-none d-sm-inline'>Add Frozen</span></Link>
                                             </div>
                                             <div className="col-9">
                                                 <div className="row justify-content-end">
@@ -144,10 +144,11 @@ const index = () => {
                                         <tr>
                                             <th style={{width: 10}}>#</th>
                                             <th>Name</th>
-                                            <th>Description</th>
-                                            <th>Amount</th>
-                                            <th>Category</th>
-                                            <th>Brand</th>
+                                            <th className="d-none d-sm-table-cell">Description</th>
+                                            <th className="d-none d-sm-table-cell">Amount</th>
+                                            <th>Size</th>
+                                            <th className="d-none d-sm-table-cell">Category</th>
+                                            <th className="d-none d-sm-table-cell">Brand</th>
                                             <th className='text-center' style={{width: '150px'}}>Action</th>
                                         </tr>
                                         </thead>
@@ -156,10 +157,11 @@ const index = () => {
                                             <tr key={frozen.id}>
                                                 <td>{(currentPage - 1) * 10 + index + 1}</td>
                                                 <td>{frozen.name}</td>
-                                                <td>{frozen.description}</td>
-                                                <td>{frozen.amount}</td>
-                                                <td>{frozen.category.name}</td>
-                                                <td>{frozen.brand.name}</td>
+                                                <td className="d-none d-sm-table-cell">{frozen.description}</td>
+                                                <td className="d-none d-sm-table-cell">{frozen.amount}</td>
+                                                <td>{frozen.size}</td>
+                                                <td className="d-none d-sm-table-cell">{frozen.category.name}</td>
+                                                <td className="d-none d-sm-table-cell">{frozen.brand.name}</td>
                                                 <td className='text-center'>
                                                     <div className="row justify-content-around">
 

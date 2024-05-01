@@ -14,6 +14,7 @@ class Frozen extends Model
         'name',
         'description',
         'amount',
+        'size',
         'category_id',
         'brand_id',
     ];

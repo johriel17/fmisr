@@ -11,7 +11,7 @@ const Pagination = ({ currentPage, totalPages, goToPage}) => {
                         <button disabled={currentPage === 1} className='page-link' onClick={() => goToPage(currentPage - 1)}>&laquo;</button>
                     </li>
                     <li className="page-item">
-                        <button onClick={() => goToPage(page)} className="page-link active">
+                        <button onClick={() => goToPage(currentPage)} className="page-link active">
                             <span className='active'>{currentPage}</span>
                         </button>
                     </li>
