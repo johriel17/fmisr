@@ -2,5 +2,5 @@
 
 # The server is live [here](https://fmisr.onrender.com)
 ## credentials
--lei@gmail.com
--leirhoj
+ - lei@gmail.com
+ - leirhoj
